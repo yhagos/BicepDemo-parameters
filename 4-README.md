@@ -16,3 +16,17 @@ az deployment group create --resource-group rg-demo-001 --template-file 3-main.b
       yonashagos@microsoft.com
 
 
+
+
+README
+
+9-*   is to show advance modularized implementation of 3-main
+   here we introduce 
+              modules
+              conditionals
+              array of resources
+              and many other Bicep advanced features
+
+az group create --name rg-demo-002 --location eastus
+az deployment group create --resource-group rg-demo-002 --template-file 9-module-main.bicep  --parameters ./parameters.json  --what-if -w 
+
