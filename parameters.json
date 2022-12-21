@@ -60,13 +60,13 @@
                     "adminPassword":  "1qaz2wsx!QAZ@WSX",
                     "virtualNetworkName":  "vnet-program-001",
                     "subnetName":  "public",
-                    "nicName":  "nic-vm-progam-001-001",
+                    "nicName":  "nic-vm-001",
                     "vmSize":  "Standard_D2s_v3",
                     "OSVersion":  "2019-datacenter-gensecond",
                     "publicIpSku":  "Basic",
-                    "publicIpName":  "pip-vm-progam-001-001",
+                    "publicIpName":  "pip-vm-001",
                     "publicIPAllocationMethod":  "Dynamic",
-                    "networkSecurityGroupName":  "nsg-vm-progam-001-001"
+                    "networkSecurityGroupName":  "nsg-vm-001"
                 },
                 {
                     "vmName":  "vm-002-P001",
@@ -75,13 +75,13 @@
                     "adminPassword":  "1qaz2wsx!QAZ@WSX",
                     "virtualNetworkName":  "vnet-program-001",
                     "subnetName":  "public",
-                    "nicName":  "nic-vm-progam-001-002",
+                    "nicName":  "nic-vm-002",
                     "vmSize":  "Standard_D2s_v3",
                     "OSVersion":  "2019-datacenter-gensecond",
                     "publicIpSku":  "Basic",
-                    "publicIpName":  "pip-vm-progam-001-002",
+                    "publicIpName":  "pip-vm-002",
                     "publicIPAllocationMethod":  "Dynamic",
-                    "networkSecurityGroupName":  "nsg-vm-progam-001-002"
+                    "networkSecurityGroupName":  "nsg-vm-002"
 
                 }
             ]
