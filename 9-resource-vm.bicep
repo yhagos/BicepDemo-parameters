@@ -34,9 +34,9 @@ resource pip 'Microsoft.Network/publicIPAddresses@2021-02-01' = {
   }
   properties: {
     publicIPAllocationMethod: publicIPAllocationMethod
-    dnsSettings: {
-      domainNameLabel: dnsLabelPrefix
-    }
+    // dnsSettings: {
+    //   domainNameLabel: dnsLabelPrefix
+    // }
   }
 }
 
