@@ -2,6 +2,11 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "storageAccountName": {
+            "value": {
+                "stdemo002forallaccounts"
+            }
+        },
         "Vnets": {
             "value": [
                 {
@@ -51,10 +56,43 @@
 
                     ]
                 }
-
-
             ]
-        }      
+        },
+        "vms": {
+            "value": [
+                {
+                    "location":  "eastus"   ,
+                    "adminUsername":  "demo-admin",
+                    "adminPassword":  "1qaz2wsx!QAZ@WSX",
+                    "virtualNetworkName":  "vnet-program-001",
+                    "subnetName":  "public",
+                    "nicName":  "nic-vm-progam-001-001",
+                    "vmName":  "vm-progam-001-001",
+                    "vmSize":  "Standard_D2s_v3",
+                    "OSVersion":  "2019-datacenter-gensecond",
+                    "publicIpSku":  "Basic",
+                    "publicIpName":  "pip-vm-progam-001-001",
+                    "publicIPAllocationMethod":  "Dynamic",
+                    "networkSecurityGroupName":  "nsg-vm-progam-001-001"
+                },
+                {
+                    "location":  "eastus"   ,
+                    "adminUsername":  "demo-admin",
+                    "adminPassword":  "1qaz2wsx!QAZ@WSX",
+                    "virtualNetworkName":  "vnet-program-001",
+                    "subnetName":  "public",
+                    "nicName":  "nic-vm-progam-001-002",
+                    "vmName":  "vm-progam-001-002",
+                    "vmSize":  "Standard_D2s_v3",
+                    "OSVersion":  "2019-datacenter-gensecond",
+                    "publicIpSku":  "Basic",
+                    "publicIpName":  "pip-vm-progam-001-002",
+                    "publicIPAllocationMethod":  "Dynamic",
+                    "networkSecurityGroupName":  "nsg-vm-progam-001-002"
 
+                }
+            ]
+    
+        }
     }
 }
