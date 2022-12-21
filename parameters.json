@@ -69,11 +69,11 @@
                     "networkSecurityGroupName":  "nsg-vm-001"
                 },
                 {
-                    "vmName":  "vm-002-P001",
+                    "vmName":  "vm-002-P002",
                     "location":  "eastus"   ,
                     "adminUsername":  "demo-admin",
                     "adminPassword":  "1qaz2wsx!QAZ@WSX",
-                    "virtualNetworkName":  "vnet-program-001",
+                    "virtualNetworkName":  "vnet-program-002",
                     "subnetName":  "public",
                     "nicName":  "nic-vm-002",
                     "vmSize":  "Standard_D2s_v3",

@@ -36,6 +36,7 @@ resource pip 'Microsoft.Network/publicIPAddresses@2021-02-01' = {
     publicIPAllocationMethod: publicIPAllocationMethod
     dnsSettings: {
       domainNameLabel: dnsLabelPrefix
+      toLower('${vmName}-${uniqueString(resourceGroup().id, vmName)}')
     }
   }
 }
