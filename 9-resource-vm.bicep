@@ -18,9 +18,9 @@ param virtualNetworkName string
 @description('Unique DNS Name for the Public IP used to access the Virtual Machine.')
 param dnsLabelPrefix string = toLower('${vmName}-${uniqueString(resourceGroup().id, vmName)}')
 
-// resource existingSTG 'Microsoft.Storage/storageAccounts@2021-04-01' existing = {
-//   name: storageAccountName
-// }
+resource existingSTG 'Microsoft.Storage/storageAccounts@2021-04-01' existing = {
+  name: storageAccountName
+}
 
 resource existingVNET 'Microsoft.Network/virtualNetworks@2021-02-01' existing = {
   name: virtualNetworkName
@@ -124,12 +124,12 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
         }
       ]
     }
-    // diagnosticsProfile: {
-    //   bootDiagnostics: {
-    //     enabled: true
-    //     storageUri: existingSTG.properties.primaryEndpoints.blob
-    //   }
-    // }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+        storageUri: existingSTG.properties.primaryEndpoints.blob
+      }
+    }
   }
 }
 

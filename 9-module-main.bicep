@@ -31,7 +31,7 @@ module virtualMachines '9-resource-vm.bicep' = [for vm in vms: {
     publicIPAllocationMethod:  vm.publicIPAllocationMethod
     publicIpName:  vm.publicIpName
     publicIpSku:  vm.publicIpSku
-    storageAccountName:  vm.storageAccountName
+    storageAccountName:  storageAccountName
     subnetName:  vm.subnetName
     virtualNetworkName:  vm.virtualNetworkName
     vmName:  vm.vmName
