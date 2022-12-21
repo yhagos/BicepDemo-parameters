@@ -1,9 +1,7 @@
 param location string
 param virtualNetworkName string
 param addressPrefix string
-param subnetName string
-param subnetPrefix string
-
+param subnets array
 
 
 resource vn 'Microsoft.Network/virtualNetworks@2021-02-01' = {
@@ -15,16 +13,14 @@ resource vn 'Microsoft.Network/virtualNetworks@2021-02-01' = {
         addressPrefix
       ]
     }
-    subnets: [
-      {
-        name: subnetName
-        properties: {
-          addressPrefix: subnetPrefix
-          networkSecurityGroup: {
+    subnets: [ for subnet in subnets: {
+      name: subnet.subnetName
+      properties: {
+        addressPrefix: subnet.subnetPrefix
+        networkSecurityGroup: {
 
-          }
         }
       }
-    ]
+    }]
   }
 }
