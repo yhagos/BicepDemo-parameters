@@ -19,8 +19,8 @@ module vnets '9-resource-vnet.bicep' = [for vnet in Vnets: {
 }]
 
 
-module vmssss '9-resource-vm.bicep' = [for vm in vms: {
-  name: '${vm.virtualNetworkName}${uniqueString(resourceGroup().id)}'
+module virtualMachines '9-resource-vm.bicep' = [for vm in vms: {
+  name: '${vm.vmName}-${uniqueString(resourceGroup().id)}'
   params: {
     adminPassword: vm.adminPassword
     adminUsername:  vm.adminUsername
@@ -36,6 +36,7 @@ module vmssss '9-resource-vm.bicep' = [for vm in vms: {
     virtualNetworkName:  vm.virtualNetworkName
     vmName:  vm.vmName
     vmSize:  vm.vmSize
+
   }
 }]
 
