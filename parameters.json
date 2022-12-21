@@ -27,7 +27,7 @@
             "value": "nic-demo"
         },
         "storageAccountName": {
-            "value": "stdemobiceptraining001"
+            "value": "stdemobiceptraining002"
         },
         "vmName": {
             "value": "vm-demo"
