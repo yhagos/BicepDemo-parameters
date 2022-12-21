@@ -9,7 +9,7 @@ param Vnets array
 module vnets '9-resource-vnet.bicep' = [for vnet in Vnets: {
   name: '${vnet.virtualNetworkName}${uniqueString(resourceGroup().id)}'
   params: {
-    addressPrefixes: vnet.addressPrefixes
+    addressPrefixes: vnet.addressPrefixes[0]
     location: vnet.location
     subnets: vnet.subnets
     virtualNetworkName: vnet.virtualNetworkName

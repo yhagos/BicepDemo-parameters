@@ -12,6 +12,7 @@ resource vn 'Microsoft.Network/virtualNetworks@2021-02-01' = {
       addressPrefixes: [
         addressPrefixes
       ]
+
     }
     subnets: [ for subnet in subnets: {
       name: subnet.subnetName
