@@ -49,7 +49,60 @@
         },
         "networkSecurityGroupName": {
             "value": "nsg-demo-001"
-        }       
+        },
+        "Vnets": {
+            "value": [
+                {
+                    "virtualNetworkName":"vnet-program-001",
+                    "location":"eastus",
+                    "resource_group": "rg-demo-002",
+                    "addressPrefixes": [
+                        "10.0.1.0/25"
+                    ],
+                    "subnets": [
+                        {
+                            "subnetname": "public",
+                            "addressPrefix": "10.0.1.0/26",
+                            "routeTable": "rt-program-001-public-subnet"
+                        },
+                        {
+                            "subnetname": "private",
+                            "addressPrefix": "10.0.1.96/28",
+                           "routeTable": "rt-program-001-private-subnet"
+                        }
+  
+                    ]
+                },
+                {
+                    "virtualNetworkName":"vnet-program-002",
+                    "location":"eastus",
+                    "resource_group": "rg-demo-002",
+                    "addressPrefixes": [
+                        "10.0.2.0/25"
+                    ],
+                    "subnets": [
+                        {
+                            "subnetname": "public",
+                            "addressPrefix": "10.0.2.0/26",
+                            "serviceEndpoints": [
+                                {
+                                    "service": "Microsoft.KeyVault"
+                                }
+                            ],
+                            "routeTable": "rt-program-002-public-subnet"
+                        },
+                        {
+                            "subnetname": "private",
+                            "addressPrefix": "10.0.2.96/28",
+                            "routeTable": "rt-program-002-private-subnet"
+                        }
+
+                    ]
+                }
+
+
+            ]
+        }      
 
     }
 }

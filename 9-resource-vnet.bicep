@@ -1,7 +1,4 @@
-@secure()
-
 param location string
-
 param virtualNetworkName string
 param addressPrefix string
 param subnetName string
