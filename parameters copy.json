@@ -68,7 +68,7 @@
                         {
                             "subnetname": "private",
                             "addressPrefix": "10.0.1.96/28",
-                           "routeTable": "rt-program-001-private-subnet"
+                            "routeTable": "rt-program-001-private-subnet"
                         }
   
                     ]
@@ -84,11 +84,6 @@
                         {
                             "subnetname": "public",
                             "addressPrefix": "10.0.2.0/26",
-                            "serviceEndpoints": [
-                                {
-                                    "service": "Microsoft.KeyVault"
-                                }
-                            ],
                             "routeTable": "rt-program-002-public-subnet"
                         },
                         {
