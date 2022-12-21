@@ -4,9 +4,9 @@
 
 # works Fine
 az group create --name rg-demo-001 --location eastus
-az deployment group create --resource-group rg-demo-001 --template-file 3-main.bicep  --parameters ./parameters.json  --what-if -w 
+az deployment group create --resource-group rg-demo-001 --template-file 3-main.bicep  --parameters ./3-parameters.json  --what-if -w 
 
-az deployment group create --resource-group rg-demo-001 --template-file 3-main.bicep  --parameters ./parameters.json 
+az deployment group create --resource-group rg-demo-001 --template-file 3-main.bicep  --parameters ./3-parameters.json 
 
 
 # For further information on this topic, I will drop a link in the chat:
