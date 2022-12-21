@@ -3,9 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {
-            "value": {
-                "stdemo002forallaccounts"
-            }
+            "value": "stdemo002forallaccounts"
         },
         "Vnets": {
             "value": [
