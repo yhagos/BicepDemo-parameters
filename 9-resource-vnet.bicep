@@ -17,7 +17,7 @@ resource vn 'Microsoft.Network/virtualNetworks@2021-02-01' = {
     subnets: [ for subnet in subnets: {
       name: subnet.subnetName
       properties: {
-        addressPrefix: subnet.subnetPrefix
+        addressPrefix: subnet.addressPrefix
         networkSecurityGroup: {
 
         }
