@@ -13,14 +13,14 @@ resource vn 'Microsoft.Network/virtualNetworks@2021-02-01' = {
         addressPrefix
       ]
     }
-    subnets: [ for subnet in subnets: {
-      name: subnet.subnetName
-      properties: {
-        addressPrefix: subnet.subnetPrefix
-        networkSecurityGroup: {
+    // subnets: [ for subnet in subnets: {
+    //   name: subnet.subnetName
+    //   properties: {
+    //     addressPrefix: subnet.subnetPrefix
+    //     networkSecurityGroup: {
 
-        }
-      }
-    }]
+    //     }
+    //   }
+    // }]
   }
 }
