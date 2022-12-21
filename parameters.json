@@ -54,7 +54,7 @@
         "vms": {
             "value": [
                 {
-                    "vmName":  "vm-001-progam-001",
+                    "vmName":  "vm-001-P001",
                     "location":  "eastus"   ,
                     "adminUsername":  "demo-admin",
                     "adminPassword":  "1qaz2wsx!QAZ@WSX",
@@ -69,7 +69,7 @@
                     "networkSecurityGroupName":  "nsg-vm-progam-001-001"
                 },
                 {
-                    "vmName":  "vm-002-progam-001",
+                    "vmName":  "vm-002-P001",
                     "location":  "eastus"   ,
                     "adminUsername":  "demo-admin",
                     "adminPassword":  "1qaz2wsx!QAZ@WSX",
