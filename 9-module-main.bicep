@@ -14,7 +14,7 @@ module vnets '9-resource-vnet.bicep' = [for vnet in Vnets: {
     location: vnet.location
     subnets: vnet.subnets
     virtualNetworkName: vnet.virtualNetworkName
-    storageAccountName: storageAccountName
+    // storageAccountName: storageAccountName
   }
 }]
 
@@ -31,7 +31,7 @@ module virtualMachines '9-resource-vm.bicep' = [for vm in vms: {
     publicIPAllocationMethod:  vm.publicIPAllocationMethod
     publicIpName:  vm.publicIpName
     publicIpSku:  vm.publicIpSku
-    storageAccountName:  vm.storageAccountName
+    // storageAccountName:  vm.storageAccountName
     subnetName:  vm.subnetName
     virtualNetworkName:  vm.virtualNetworkName
     vmName:  vm.vmName
